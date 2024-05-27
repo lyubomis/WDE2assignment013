@@ -1,4 +1,5 @@
--- Step 1: Create a table named Employees with columns emp_id, first_name, last_name, and salary. 
+-- Step 1, Create a table named Employees with columns emp_id, first_name, last_name, and salary. 
+
 CREATE TABLE Employees (
     emp_id INT PRIMARY KEY,
     first_name VARCHAR(50),
@@ -6,15 +7,17 @@ CREATE TABLE Employees (
     salary DECIMAL(10, 2)
 );
 
--- Step 2: Insert Testing Data into the Table:
+-- Step 2, Insert Testing Data into the Table:
 INSERT INTO Employees (emp_id, first_name, last_name, salary)
-VALUES
+SELECT
 (1, 'John', 'Li', 10000),
 (2, 'Bob', 'Smith', 20000),
-(3, 'Joe', 'Bond', 35000);
+(3, 'Joe', 'Bond', 35000),
+(3, 'Anna', 'Maria', 55000);
 
 
--- Step 3: Use SQL Functions: The script includes SQL queries that use the SUM(), AVG(), MAX().
+-- Step 3, Apply SQL functions.  
+-- includes SQL queries that use the SUM(), AVG(), MAX().
 
 -- Calculate the total salary using the SUM() function
 SELECT SUM(salary) AS total_salary FROM Employees;
